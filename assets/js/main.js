@@ -31,6 +31,31 @@
     });
   });
 
+  // ---- video reel --------------------------------------------------------
+  var vid = document.querySelector('.reel-vid');
+  var vtoggle = document.querySelector('.reel-toggle');
+  if (vid && vtoggle) {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function setPaused(paused) {
+      vtoggle.setAttribute('aria-pressed', String(paused));
+      vtoggle.setAttribute('aria-label', paused ? 'Play animation' : 'Pause animation');
+    }
+
+    if (reduce) {
+      setPaused(true);                 // respect the visitor's motion setting
+    } else {
+      var p = vid.play();
+      if (p && p.catch) p.catch(function () { setPaused(true); });
+      setPaused(false);
+    }
+
+    vtoggle.addEventListener('click', function () {
+      if (vid.paused) { vid.play(); setPaused(false); }
+      else { vid.pause(); setPaused(true); }
+    });
+  }
+
   // ---- mobile nav --------------------------------------------------------
   var nt = document.querySelector('.navtoggle');
   var nav = document.querySelector('.nav');
