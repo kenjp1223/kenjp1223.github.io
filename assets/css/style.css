@@ -238,6 +238,26 @@ h3 { font-size: 1.05rem; font-weight: 600; margin: 0 0 .3rem; }
 .abs p { margin: 0; font-size: .85rem; color: var(--muted); line-height: 1.6; }
 .v-other { background: var(--surface); }
 
+/* selected-publications block */
+.featured {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: .4rem 1.4rem 1rem; box-shadow: var(--shadow);
+  margin-bottom: 3rem;
+}
+.yr-sel {
+  font-family: var(--sans); font-size: .72rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: .1em; color: var(--accent);
+  border-bottom-color: color-mix(in srgb, var(--accent) 25%, transparent);
+  margin: 1.1rem 0 .3rem;
+}
+.featured .pub:last-child { border-bottom: 0; padding-bottom: .3rem; }
+.allhead {
+  font-size: .72rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em;
+  font-family: var(--sans); color: var(--faint);
+  margin: 0 0 1.4rem; padding-bottom: .4rem; border-bottom: 1px solid var(--border);
+}
+.allhead + .yr, .featured + section .yr { margin-top: 0; }
+
 /* ---------------------------------------------------------- research */
 .topics { display: grid; gap: 1.1rem; }
 .topic {
