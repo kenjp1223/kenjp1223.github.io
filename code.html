@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Code &amp; tools &middot; Kentaro K. Ishii</title>
+<meta name="description" content="Whole-brain imaging pipelines and statistical methods built by Kentaro K. Ishii.">
+<meta name="author" content="Kentaro K. Ishii">
+<meta property="og:title" content="Code &amp; tools &middot; Kentaro K. Ishii">
+<meta property="og:description" content="Whole-brain imaging pipelines and statistical methods built by Kentaro K. Ishii.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#129504;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+(function(){try{var t=localStorage.getItem('theme');if(t){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="index.html">Kentaro&nbsp;K.&nbsp;Ishii</a>
+    <nav class="nav">
+          <a href="index.html">about</a>
+          <a href="research.html">research</a>
+          <a href="publications.html">publications</a>
+          <a href="code.html" class="active">code</a>
+          <a href="cv.html">cv</a>
+          <a href="contact.html">contact</a>
+    </nav>
+    <div class="head-ctrl">
+      <button class="theme" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="ic-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><g><line x1="12" y1="1.8" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.2"/><line x1="1.8" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.2" y2="12"/><line x1="4.6" y1="4.6" x2="6.2" y2="6.2"/><line x1="17.8" y1="17.8" x2="19.4" y2="19.4"/><line x1="4.6" y1="19.4" x2="6.2" y2="17.8"/><line x1="17.8" y1="6.2" x2="19.4" y2="4.6"/></g></svg>
+        <svg class="ic-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.6 8.6 0 0 1 9.5 3.5a8.6 8.6 0 1 0 11 11z"/></svg>
+      </button>
+      <button class="navtoggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<main id="main" class="wrap">
+
+  <header class="pagehead">
+    <h1>Code &amp; tools</h1>
+    <p class="lede">Pipelines and statistical methods built for terabyte-scale whole-brain imaging. Repositories live on <a href="https://github.com/kenjp1223" target="_blank" rel="noopener">github.com/kenjp1223</a>.</p>
+  </header>
+
+  <section class="cards">
+    <article class="card">
+      <h2>Whole-brain preprocessing pipeline</h2>
+      <p>End-to-end processing of light-sheet volumes from raw acquisition to registered, quantified cell counts: destriping and stitching, ClearMap-based cell detection, ANTs registration to the Allen CCFv3 and Kim Lab atlases, and per-region density extraction. Runs on HPC clusters at terabyte scale.</p>
+      <p class="tags"><span>Python</span><span>ClearMap</span><span>ANTs</span><span>SLURM</span><span>SmartSPIM</span></p>
+      <p class="repo">Repository: <code>[LINK TO ADD]</code></p>
+    </article>
+
+    <article class="card">
+      <h2>Hierarchical multiple-comparison framework</h2>
+      <p>Brain-wide ensemble detection with a hierarchical testing procedure that exploits the nested structure of brain anatomy, improving detection power in small and sparsely activated regions where flat region-by-region correction fails. Developed with statistical collaborator Daniel Kessler.</p>
+      <p class="tags"><span>R</span><span>Python</span><span>multiple testing</span><span>FDR control</span></p>
+      <p class="repo">Repository: <code>[LINK TO ADD]</code></p>
+    </article>
+
+    <article class="card">
+      <h2>Activity-to-gene-expression analysis</h2>
+      <p>Links regional c-Fos activity to molecular identity by cross-referencing whole-brain activity maps against transcriptomic atlases, recovering cell-type markers and aligning opioid receptor expression with condition-specific activity patterns.</p>
+      <p class="tags"><span>Python</span><span>transcriptomic atlases</span><span>spatial analysis</span></p>
+      <p class="repo">Repository: <code>[LINK TO ADD]</code></p>
+    </article>
+  </section>
+
+  <section>
+    <h2>Teaching these methods</h2>
+    <p class="prose">I have co-organized four annual hands-on workshops at the UW Center for the Neurobiology of Addiction, Pain, and Emotion, which have trained researchers from across departments.</p>
+    <ul class="plainlist">
+      <li><strong>Light Sheet Imaging Workshop 2024</strong> &mdash; tissue clearing with the LifeCanvas SmartBatch system and the HPC preprocessing pipeline.</li>
+      <li><strong>Imaging &amp; Genetics Workshop 2021&ndash;2023</strong> &mdash; virus injection, GRIN lens, and headcap implantation surgery. Co-organized all three; helped launch the series in 2021.</li>
+    </ul>
+  </section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <p>&copy; 2026 Kentaro K. Ishii. Built as a static site, hosted on GitHub Pages.</p>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
